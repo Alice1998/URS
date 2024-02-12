@@ -19,10 +19,17 @@
   * Questions are collected through a User Survey with 411 participants
   * Different from standard evaluations and professional exams
 * **Intent divided** 🙇🧑‍💻🧑‍🎨🪂
-  * Objective
-    * Information Retrieval, Solve Problem in Specialized Areas, (Text Assistant), Use through APIs
-  * Subjective
-    * Seek Creativity, Ask for Advice, Leisure
+  * System abilities and performances on different scenario might be different,
+  * Users’ expectations across different intents are different,
+  * Evaluation criteria on different situations should be different,
+  * Therefore we design this benchmark categorized by User Intents.
+  * According to related literature, intent taxonomy is
+    * Objective
+      * Information Retrieval, Solve Problem in Specialized Areas, Text Assistant, Use through APIs
+  
+    * Subjective
+      * Seek Creativity, Ask for Advice, Leisure
+  
 
 ## Results
 
@@ -65,7 +72,7 @@ Description, Question Cases and Evaluation Criteria under different Intents.
 
 ## Citation
 
-- Please cite our [Report](https://scarlet-dolomite-cc0.notion.site/User-Centric-Evaluation-of-LLMs-e2fae792b39e43ec81b5428437688720?pvs=74) if you find our work valuable, thank you!
+- Please cite our [Report](https://jiayinwang.notion.site/User-Centric-Evaluation-of-LLMs-e2fae792b39e43ec81b5428437688720?pvs=4) if you find our work valuable, thank you!
 
 ```
 @inproceedings{URS,
