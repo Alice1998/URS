@@ -4,18 +4,26 @@
 
 📚 Blog: [User Centric Evaluation Benchmark](https://scarlet-dolomite-cc0.notion.site/User-Centric-Evaluation-of-LLMs-e2fae792b39e43ec81b5428437688720?pvs=74)
 
-💡 Currently Call for Contributions
+🚧 Currently Call for Contributions: [ENG](Contribution.md) | [中文](Contribution-CN.md)
+
+💡  Share Your Experience Here  💡
+
+[English Version](https://www.wjx.cn/vm/Qc5XIm2.aspx#) | [中文版](https://www.wjx.cn/vm/YKqvOL9.aspx# )
+
+💡  Share Your Experience Here  💡
+
+
 
 
 ## Our Highlights
 
-* User Centric 🏄🏻‍♀️🏄🏼🏄🏽‍♂️
+* **User Centric** 🏄🏻‍♀️🏄🏼🏄🏽‍♂️
   * Questions are collected through a User Survey with 411 participants
   * Different from standard evaluations and professional exams
-* Intent divided 🙋🏻🧑‍💻🧑‍🎨🪂
-  * Objective 🙋🏻🧑‍💻
+* **Intent divided** 🙇🧑‍💻🧑‍🎨🪂
+  * Objective
     * Information Retrieval, Solve Problem in Specialized Areas, (Text Assistant), Use through APIs
-  * Subjective 🧑‍🎨🪂
+  * Subjective
     * Seek Creativity, Ask for Advice, Leisure
 
 ## Results
@@ -44,3 +52,17 @@ Description, Question Cases and Evaluation Criteria under different Intents.
 | Ask for Advice        | Career development, personal counseling, gift recommendation, etc., or creating personal schedules, travel plans, shopping lists, etc. | 如何快速提高英语听力能力？<br />哪些有效方式可以缓解失眠症状？<br />适合中老年人的健康监测智能设备推荐 | 1 满足用户需求(User Satisfaction),<br />2 事实正确性(Factuality), <br />3 公平与可负责程度(Fairness and Responsibility), <br />4 创造性(Creativity), <br />5 丰富度(Richness) |
 | Seek Creativity       | Brainstorming for inspiration, innovative ideas, etc.        | 设计三个生鲜超市slogan<br />我在构思经济学的课题，关于后疫情时代消费者行为变化，给我几个具体的idea<br />如何发财 | 1 满足用户需求(User Satisfaction),<br />2 逻辑连贯性(Logical Coherence), <br />3 创造性(Creativity), <br />4 丰富度(Richness), <br />5 事实正确性(Factuality) |
 | Leisure               | Movie and music recommendations, games, and other entertaining activities | 下饭剧推荐<br />分享一个关于程序员的幽默笑话<br />推荐几款好玩的音乐节奏游戏 | 1 满足用户需求(User Satisfaction),<br />2 趣味性 (Engagement), <br />3 适宜性 (Appropriateness), <br />4 创造性 (Creativity), <br />5 事实正确性 (Factuality) |
+
+
+
+## Citation
+
+- Please cite our [Report](https://scarlet-dolomite-cc0.notion.site/User-Centric-Evaluation-of-LLMs-e2fae792b39e43ec81b5428437688720?pvs=74) if you find our work valuable, thank you!
+
+```
+@inproceedings{URS,
+	title={URS: Evaluating Large Language Models on User Reported Scenarios},
+	booktitle={THUIR Blog},
+	year={2024}
+}
+```
