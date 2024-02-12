@@ -243,11 +243,7 @@ def main():
 
 
 
-    # client = OpenAI(api_key="sk-4BFo7mug2I9JJSHpq0STPwr1Np0IYmG3aycerUnoIYOS50va",
-    #                 base_url='https://api.openai-proxy.org/v1')
-    # client = OpenAI(api_key="sk-z7CYuGnSpejt4nxcDd2e838c172d45DaAa1fDdDa2e1f7c31")
-    client = OpenAI(api_key="sk-z7CYuGnSpejt4nxcDd2e838c172d45DaAa1fDdDa2e1f7c31",
-                    base_url='https://yeysai.com/v1')
+    client=OpenAI()
 
     if 'evaluation' not in df.columns.tolist():
         df['evaluation']=""

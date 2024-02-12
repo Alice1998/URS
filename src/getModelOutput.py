@@ -16,14 +16,9 @@ class OpenAIFormat(APIclass):
     def __init__(self,model_name):
         self.model_name=model_name
         if model_name=='deepseek-chat':
-            self.client = OpenAI(api_key="sk-8644390d74514b70b0b1e078f30126a5", base_url="https://api.deepseek.com/v1")
+            self.client = OpenAI(api_key="", base_url="https://api.deepseek.com/v1")
         else:
-            # client = OpenAI(api_key="sk-4BFo7mug2I9JJSHpq0STPwr1Np0IYmG3aycerUnoIYOS50va",
-            #         base_url='https://api.openai-proxy.org/v1')
-            # client = OpenAI(api_key="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")
-            self.client = OpenAI(api_key="sk-z7CYuGnSpejt4nxcDd2e838c172d45DaAa1fDdDa2e1f7c31",
-                    base_url='https://yeysai.com/v1')
-            # client = OpenAI(api_key="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")
+            self.client = OpenAI()
             
     # tag='人类改写'
     def get_response(self, INPUT_TEXT):
@@ -44,7 +39,7 @@ class OpenAIFormat(APIclass):
 class ZhiPu(APIclass):
     def __init__(self,model_name):
         self.model_name=model_name
-        self.client = ZhipuAI(api_key="b2e3b138b5e258695664c99009174d6f.1SpD9ZcBZqcFuSUE") # 填写您自己的APIKey
+        self.client = ZhipuAI(api_key="") # 填写您自己的APIKey
 
     def get_response(self, INPUT_TEXT):
         response = self.client.chat.completions.create(
@@ -67,7 +62,7 @@ class Baichuan():
     def __init__(self,model_name):
         self.model_name=model_name
         self.url = "https://api.baichuan-ai.com/v1/chat/completions"
-        self.api_key = "343101ea569a29431d93c007fd54bebd"
+        self.api_key = ""
         self.headers = {
             "Content-Type": "application/json",
             "Authorization": "Bearer " + self.api_key
@@ -109,7 +104,7 @@ import dashscope
 class Qwen(APIclass):
     def __init__(self,model_name):
         self.model_name=model_name
-        dashscope.api_key = "sk-7066c1d5cdcf4d49870cdbf7d5bf69d1"
+        dashscope.api_key = ""
 
     def get_response(self,INPUT_TEXT):
         messages = [#{'role': 'system', 'content': 'You are a helpful assistant.'},
@@ -147,8 +142,8 @@ class Baidu(APIclass):
         """
         使用 API Key，Secret Key 获取access_token，替换下列示例中的应用API Key、应用Secret Key
         """
-        client_id="HKc7Nzd5UFpziqGpng0bb64G"
-        secret_key="tXyg4WITLelVajAVONdrBcXzXMuIDEvu"
+        client_id=""
+        secret_key=""
             
         url = f"https://aip.baidubce.com/oauth/2.0/token?grant_type=client_credentials&client_id={client_id}&client_secret={secret_key}"
         
@@ -188,13 +183,10 @@ from APIs import SparkApi
 class Spark(APIclass):
     def __init__(self,model_name):
         self.model_name=model_name
-        # self.appid = "b94e5c47"     #填写控制台中获取的 APPID 信息
-        # self.api_secret = "ZjExNzFlZjUxYmNmZDQyYTE1MDY3MmUz"   #填写控制台中获取的 APISecret 信息
-        # self.api_key ="62e866bc98f4f3c8d5361619648569db"
         
-        self.appid = "96d5a2f4"     #填写控制台中获取的 APPID 信息
-        self.api_secret = "NmI2YjQ0OTJlNmE5ZDZlNjExYTIzZTI5"   #填写控制台中获取的 APISecret 信息
-        self.api_key ="8547a41910919464e894b3f38994bf2f"
+        self.appid = ""     #填写控制台中获取的 APPID 信息
+        self.api_secret = ""   #填写控制台中获取的 APISecret 信息
+        self.api_key =""
         
         if model_name=='spark-3.5':
             self.domain='generalv3.5'
@@ -276,10 +268,6 @@ def getParser():
     return args
 
 if __name__ == "__main__":
-    # field='Advice'
-    # file_path=f"../importantData/ans_{field}_GPT4.csv"
-    # # field='SeekCreativity'
-    # df_question=pd.read_csv(file_path)
     args=getParser()
     
     field_name_list=['InformationRetrieval','SolveProblem','API']
@@ -303,7 +291,6 @@ if __name__ == "__main__":
     # test_model='qwen-max'
 
     field=sheet_name
-    # df_question=pd.read_csv(f"../importantData/{field}_{test_model}_v1.csv")
 
     df_question = pd.read_excel(file_path, sheet_name=sheet_name,engine='openpyxl')
     # df_question= pd.read_csv(f"../data/modelOutput/{field}_{test_model}.csv")
@@ -315,7 +302,6 @@ if __name__ == "__main__":
         tag='人类改写'
     else:
         tag='q1'
-    # tag=test_model
     print(test_model)
 
     df_ans=getOutput(test_model,tag)
