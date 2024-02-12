@@ -2,13 +2,13 @@
 
 📍Github: [https://github.com/Alice1998/URS](https://github.com/Alice1998/URS)
 
-📚 Blog: [User Centric Evaluation Benchmark](https://scarlet-dolomite-cc0.notion.site/User-Centric-Evaluation-of-LLMs-e2fae792b39e43ec81b5428437688720?pvs=74)
+📚 Blog: [User Centric Evaluation Benchmark](https://jiayinwang.notion.site/User-Centric-Evaluation-of-LLMs-e2fae792b39e43ec81b5428437688720?pvs=4)
 
-💡 Currently Call for Contributions!
+💡 Currently Call for Contributions
 
-​	  Introduction:  [ENG](Contribution.md) | [中文](Contribution-CN.md)
+- Introduction: [ENG](Contribution.md) | [中文](Contribution-CN.md)
 
-​	  Share Your Experience Here: [English Version](https://www.wjx.cn/vm/Qc5XIm2.aspx#) | [中文版](https://www.wjx.cn/vm/YKqvOL9.aspx#)
+- Share Your Experience Here: [English Version](https://www.wjx.cn/vm/Qc5XIm2.aspx#) | [中文版](https://www.wjx.cn/vm/YKqvOL9.aspx#)
 
 
 
@@ -51,7 +51,17 @@ Description, Question Cases and Evaluation Criteria under different Intents.
 | Seek Creativity       | Brainstorming for inspiration, innovative ideas, etc.        | 设计三个生鲜超市slogan<br />我在构思经济学的课题，关于后疫情时代消费者行为变化，给我几个具体的idea<br />如何发财 | 1 满足用户需求(User Satisfaction),<br />2 逻辑连贯性(Logical Coherence), <br />3 创造性(Creativity), <br />4 丰富度(Richness), <br />5 事实正确性(Factuality) |
 | Leisure               | Movie and music recommendations, games, and other entertaining activities | 下饭剧推荐<br />分享一个关于程序员的幽默笑话<br />推荐几款好玩的音乐节奏游戏 | 1 满足用户需求(User Satisfaction),<br />2 趣味性 (Engagement), <br />3 适宜性 (Appropriateness), <br />4 创造性 (Creativity), <br />5 事实正确性 (Factuality) |
 
+## Questions and Evaluations
 
+- Question
+  - Question comes from user survey with 411 participants around the globe.
+  - Then user feedback are manually validated or GPT-4 validated to generate the final questions.
+  - Example question cases are shown above in the table.
+- Evaluation
+  - For evaluator design, we follow the work [AlignBench](https://arxiv.org/pdf/2311.18743.pdf).
+    - GPT-4
+    - Multi-dimensional Rule-Calibrated Judge
+  - The evaluation criteria for each intents are shown in the table above.
 
 ## Citation
 
