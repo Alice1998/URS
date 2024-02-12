@@ -8,9 +8,7 @@
 
 **分享您的对话链接：**
 
-如果您的对话可以通过链接分享，我们强烈推荐您提交分享链接。
-
-[关于分享链接](#分享链接的介绍)
+如果您的对话可以通过链接分享，我们强烈推荐您提交分享链接。[关于分享链接](#分享链接的介绍)
 
 **手动填写：**
 
@@ -18,9 +16,7 @@
 
 🚧  **在此分享您的体验**  🚧
 
-[中文版](https://www.wjx.cn/vm/YKqvOL9.aspx#)
-
-[English Version](https://www.wjx.cn/vm/Qc5XIm2.aspx# )
+[中文版](https://www.wjx.cn/vm/YKqvOL9.aspx#) | [English Version](https://www.wjx.cn/vm/Qc5XIm2.aspx# )
 
 🚧  **在此分享您的体验**  🚧
 

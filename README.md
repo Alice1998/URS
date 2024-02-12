@@ -4,13 +4,11 @@
 
 📚 Blog: [User Centric Evaluation Benchmark](https://scarlet-dolomite-cc0.notion.site/User-Centric-Evaluation-of-LLMs-e2fae792b39e43ec81b5428437688720?pvs=74)
 
-🚧 Currently Call for Contributions: [ENG](Contribution.md) | [中文](Contribution-CN.md)
+💡 Currently Call for Contributions!
 
-💡  Share Your Experience Here  💡
+​	  Introduction:  [ENG](Contribution.md) | [中文](Contribution-CN.md)
 
-[English Version](https://www.wjx.cn/vm/Qc5XIm2.aspx#) | [中文版](https://www.wjx.cn/vm/YKqvOL9.aspx# )
-
-💡  Share Your Experience Here  💡
+​	  Share Your Experience Here: [English Version](https://www.wjx.cn/vm/Qc5XIm2.aspx#) | [中文版](https://www.wjx.cn/vm/YKqvOL9.aspx#)
 
 
 

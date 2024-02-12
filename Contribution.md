@@ -8,9 +8,7 @@ We are excited to invite you to participate in this user survey, aimed at gather
 
 **Share Your Conversation Link:** 
 
-If your conversation can be shared via a link, we highly recommend submitting this link.
-
-[See Instructions](#Instruction)
+If your conversation can be shared via a link, we highly recommend submitting this link. [See Instructions](#Instruction)
 
 **Manually Fill In:** 
 
@@ -18,9 +16,7 @@ If you're unable to share a conversation link, you may manually input your quest
 
 🚧  **Share Your Experience Here**  🚧
 
-[English Version](https://www.wjx.cn/vm/Qc5XIm2.aspx# )
-
-[中文版](https://www.wjx.cn/vm/YKqvOL9.aspx# )
+[English Version](https://www.wjx.cn/vm/Qc5XIm2.aspx# ) | [中文版](https://www.wjx.cn/vm/YKqvOL9.aspx# )
 
 🚧  **Share Your Experience Here**  🚧
 
