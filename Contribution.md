@@ -32,11 +32,10 @@ Your contribution is crucial in shaping the future of conversational services, e
 
 
 
-###### Instruction for Sharing Links
-
+###### Instruction
+Sharing Conversation Links:
 <center class='half'>
-  <img src='./fig/ChatGPT-share.png'>
-  <img src='./fig/ERNIE-share.png'>
+  <img src='./fig/ChatGPT-share.png' width='400'/><img src='./fig/ERNIE-share.png' width='400'/>
 </center>
 
 
