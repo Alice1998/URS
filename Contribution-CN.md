@@ -1,6 +1,6 @@
 ## 分享您的对话
 
-非常高兴地邀请您参加本项用户调查，旨在收集真实，高质量的对话数据，用以构建以用户为中心的大型语言模型评测方法。您的贡献对于构建对话式服务的非常重要，确保它们的发展与实际用户的需求和期望相符。
+非常高兴地邀请您参加本项用户调查，旨在收集真实、多元、高质量的对话数据，用以构建以用户为中心的大型语言模型评测方法。您的贡献对于构建对话式服务的非常重要，确保它们的发展与实际用户的需求和期望相符。
 
 
 
@@ -19,6 +19,12 @@
 [中文版](https://www.wjx.cn/vm/YKqvOL9.aspx#) | [English Version](https://www.wjx.cn/vm/Qc5XIm2.aspx# )
 
 🚧  **在此分享您的体验**  🚧
+
+如您已填写上述问卷，希望再次分享新的对话，
+
+请在此下载格式文件：[中文](https://cloud.tsinghua.edu.cn/f/3f43eb9698f54d8b80b1/) | [English](https://cloud.tsinghua.edu.cn/f/daca9e76f4b24741b900/)
+
+并在此上传你的对话： [Upload Your File](https://cloud.tsinghua.edu.cn/u/d/25c5a976d0954656a574/)
 
 
 
