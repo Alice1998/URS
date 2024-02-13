@@ -12,7 +12,7 @@ Your contribution is crucial in shaping the future of conversational services, e
 
 - Share Your Conversation Link:
 
-  If your conversation can be shared via a link, we highly recommend submitting this link. [See Instructions](#Instruction for Sharing Links)
+  If your conversation can be shared via a link, we highly recommend submitting this link. [See Instructions](#Instruction)
 
 - Manually Fill In:
 
