@@ -6,31 +6,25 @@
 
 ### 如何参与：
 
-**分享您的对话链接：**
+#### 介绍
 
-如果您的对话可以通过链接分享，我们强烈推荐您提交分享链接。[关于分享链接](#分享链接的介绍)
+- 分享您的对话链接
 
-**手动填写：**
+  如果您的对话可以通过链接分享，我们强烈推荐您提交分享链接。
 
-如果您无法分享对话链接，可以手动输入您的问题和系统的回应。
+  <img src='./fig/ChatGPT-share.png' width='400'/><img src='./fig/ERNIE-share.png' width='400'/>
 
-🚧  **在此分享您的体验**  🚧
+- 手动填写
+  如果您无法分享对话链接，可以手动输入您的问题和系统的回应。
 
-[中文版](https://www.wjx.cn/vm/YKqvOL9.aspx#) | [English Version](https://www.wjx.cn/vm/Qc5XIm2.aspx# )
+#### 在此分享您的体验
 
-🚧  **在此分享您的体验**  🚧
+- 问卷
+  
+  🚧 [中文版](https://www.wjx.cn/vm/YKqvOL9.aspx#) | [English Version](https://www.wjx.cn/vm/Qc5XIm2.aspx# ) 🚧
 
-如您已填写上述问卷，希望再次分享新的对话，
-
-请在此下载格式文件：[中文](https://cloud.tsinghua.edu.cn/f/3f43eb9698f54d8b80b1/) | [English](https://cloud.tsinghua.edu.cn/f/daca9e76f4b24741b900/)
-
-并在此上传你的对话： [Upload Your File](https://cloud.tsinghua.edu.cn/u/d/25c5a976d0954656a574/)
-
-
-
-###### 分享链接的介绍
-
-<center class='half'>
-  <img src='./fig/ChatGPT-share.png'>
-  <img src='./fig/ERNIE-share.png'>
-</center>
+- 如您已填写上述问卷，希望再次分享新的对话，
+  
+  请在此下载格式文件：[中文](https://cloud.tsinghua.edu.cn/f/3f43eb9698f54d8b80b1/) | [English](https://cloud.tsinghua.edu.cn/f/daca9e76f4b24741b900/)
+  
+  并在此上传你的对话： [Upload Your File](https://cloud.tsinghua.edu.cn/u/d/25c5a976d0954656a574/)
