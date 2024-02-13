@@ -12,7 +12,8 @@ Your contribution is crucial in shaping the future of conversational services, e
 
 - Share Your Conversation Link:
 
-  If your conversation can be shared via a link, we highly recommend submitting this link. [See Instructions](#Instruction)
+  If your conversation can be shared via a link, we highly recommend submitting this link.
+  <img src='./fig/ChatGPT-share.png' width='400'/><img src='./fig/ERNIE-share.png' width='400'/>
 
 - Manually Fill In:
 
@@ -28,14 +29,5 @@ Your contribution is crucial in shaping the future of conversational services, e
   - Download the format file here: [English](https://cloud.tsinghua.edu.cn/f/daca9e76f4b24741b900/) | [中文](https://cloud.tsinghua.edu.cn/f/3f43eb9698f54d8b80b1/)
   - Upload your conversations here: [Upload Your File](https://cloud.tsinghua.edu.cn/u/d/25c5a976d0954656a574/)
 
-
-
-
-
-###### Instruction
-Sharing Conversation Links:
-<center class='half'>
-  <img src='./fig/ChatGPT-share.png' width='400'/><img src='./fig/ERNIE-share.png' width='400'/>
-</center>
 
 
