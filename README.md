@@ -33,6 +33,8 @@
 
 ## Results
 
+- 24.02 results
+
 | Intents            | Solve Problem | SolveProblem GPT | Information Retrieval | API      | Ask for Advice | Seek Creativity | Leisure  | All  |
 | ------------------ | ------------- | ---------------- | --------------------- | -------- | -------------- | --------------- | -------- | ---- |
 | #Cases             | 60            | 212              | 147                   | 26       | 58             | 57              | 60       | 620  |
@@ -47,6 +49,8 @@
 | deepseek-chat      | 6.12          | **6.92**         | 5.55                  | 6.58     | 5.43           | **5.89**        | 4.23     | 6.01 |
 
 Bolding indicates the presence of reverse order.
+
+This benchmark is currently under continuous improvement and the results are for reference only. Existing versions may contain rough questions.
 
 
 
