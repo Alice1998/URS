@@ -1151,7 +1151,7 @@ ChatGPT,https://chat.openai.com/share/1c0bdb42-5316-43f4-9cf6-70e16338fd6c,文�
 ChatGPT,https://chat.openai.com/share/c7b834ef-526a-42d8-ac56-b7b4a8c664ea,解决专业问题,中等,31,1,1,"解释以下下面的程序并解释为什么会输出这样的结果：
 # LLM Chain
 from langchain_openai import ChatOpenAI
-llm = ChatOpenAI(openai_api_key=""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"")
+llm = ChatOpenAI(openai_api_key=""sk-"")
 llm.invoke(""how can langsmith help with testing?"")
 
 from langchain_core.prompts import ChatPromptTemplate
