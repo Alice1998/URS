@@ -14,10 +14,12 @@
 
 ## News
 
-- 03.04: Update Survey Data
-  - We update 383 question from our new user study!
-  - This data contain the real-world conversations (by text or share link), original user reported task difficulty, and our extracted questions.
-  - See [File](data/0304-update.csv)
+- 03.05: **Update Survey Data**
+  - We update question from our new user study
+    - <u>421</u> questions from Chinese survey
+    - <u>698</u> question from English survey
+  - This data contain real-world <u>conversations</u> (by text or share link), original user reported <u>task difficulty</u>, and the <u>extracted questions</u>.
+  - See questions from [Chinese survey](data/0304-update-chinese.csv) and [English survey](/data/0304-update-english.csv).
 
 
 ## Our Highlights
