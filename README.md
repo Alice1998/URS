@@ -7,20 +7,16 @@
 💡 Currently Call for Contributions
 
 - Introduction: [ENG](Contribution.md) | [中文](Contribution-CN.md)
-
-- Share Your Experience Here: [English Version](https://www.wjx.cn/vm/Qc5XIm2.aspx#) | [中文版](https://www.wjx.cn/vm/YKqvOL9.aspx#)
-
-
+- Share Your Experience Here: [English Version](https://www.wjx.cn/vm/Qc5XIm2.aspx#) | [中文版](https://www.wjx.cn/vm/e1f1YEA.aspx#)
 
 ## News
 
 - 03.05: **Update Survey Data**
   - We update question from our new user study
-    - <u>421</u> questions from Chinese survey
-    - <u>698</u> question from English survey
-  - This data contain real-world <u>conversations</u> (by text or share link), original user reported <u>task difficulty</u>, and the <u>extracted questions</u>.
+    - `<u>`421`</u>` questions from Chinese survey
+    - `<u>`698`</u>` question from English survey
+  - This data contain real-world `<u>`conversations`</u>` (by text or share link), original user reported `<u>`task difficulty`</u>`, and the `<u>`extracted questions`</u>`.
   - See questions from [Chinese survey](data/0304-update-chinese.csv) and [English survey](/data/0304-update-english.csv).
-
 
 ## Our Highlights
 
@@ -34,11 +30,11 @@
   * Therefore we design this benchmark categorized by User Intents.
   * According to related literature, intent taxonomy is
     * Objective
+
       * Information Retrieval, Solve Problem in Specialized Areas, Text Assistant, Use through APIs
-  
     * Subjective
+
       * Seek Creativity, Ask for Advice, Leisure
-  
 
 ## Results
 
@@ -58,14 +54,14 @@
 
 Description, Question Cases and Evaluation Criteria under different Intents.
 
-| Intent                | Description                                                  | Cases                                                        | Evaluation Criteria                                          |
-| --------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| Solve Problem         | Seek answers or explanations in the field of programming, natural sciences, humanities, social sciences, etc.<br />Address and learn about the profession | 大模型现在为什么都是decoder-only架构<br />纯流体的粘度测试怎么做<br />烟草花叶病毒属外壳蛋白进入叶绿体的已知机制介绍<br />如何证明费马大定理？ | 1 事实正确性(Factuality),<br />2 满足用户需求(User Satisfaction), <br />3 清晰度(Clarity), <br />4 逻辑连贯性(Logical Coherence), <br />5 完备性(Completeness) |
-| Information Retrieval | Fast and direct access to factual information                | 大雪农历初几<br />一加仑是多少升<br />西瓜书的目录是什么     | 1 事实正确性(Factuality),<br />2 满足用户需求(User Satisfaction), <br />3 清晰度 (Clarity), <br />4 完备性 (Completeness), <br />5 逻辑连贯性(Logical Coherence) |
-| Use through APIs      | Use through Application Programming Interface instead of user interfaces<br />Explore and test the capabilities of LLM, such as evaluating it on various tasks, simulating agents, environments, or datasets, etc. | 大模型CEval评测<br />MBTI测试<br />评价模型生成内容的helpfulness | 1 事实正确性(Factuality),<br />2 满足用户需求(User Satisfaction), <br />3 清晰度(Clarity), <br />4 逻辑连贯性(Logical Coherence), <br />5 完备性(Completeness) |
-| Ask for Advice        | Career development, personal counseling, gift recommendation, etc., or creating personal schedules, travel plans, shopping lists, etc. | 如何快速提高英语听力能力？<br />哪些有效方式可以缓解失眠症状？<br />适合中老年人的健康监测智能设备推荐 | 1 满足用户需求(User Satisfaction),<br />2 事实正确性(Factuality), <br />3 公平与可负责程度(Fairness and Responsibility), <br />4 创造性(Creativity), <br />5 丰富度(Richness) |
-| Seek Creativity       | Brainstorming for inspiration, innovative ideas, etc.        | 设计三个生鲜超市slogan<br />我在构思经济学的课题，关于后疫情时代消费者行为变化，给我几个具体的idea<br />如何发财 | 1 满足用户需求(User Satisfaction),<br />2 逻辑连贯性(Logical Coherence), <br />3 创造性(Creativity), <br />4 丰富度(Richness), <br />5 事实正确性(Factuality) |
-| Leisure               | Movie and music recommendations, games, and other entertaining activities | 下饭剧推荐<br />分享一个关于程序员的幽默笑话<br />推荐几款好玩的音乐节奏游戏 | 1 满足用户需求(User Satisfaction),<br />2 趣味性 (Engagement), <br />3 适宜性 (Appropriateness), <br />4 创造性 (Creativity), <br />5 事实正确性 (Factuality) |
+| Intent                | Description                                                                                                                                                                                                        | Cases                                                                                                                                          | Evaluation Criteria                                                                                                                                                           |
+| --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Solve Problem         | Seek answers or explanations in the field of programming, natural sciences, humanities, social sciences, etc.<br />Address and learn about the profession                                                          | 大模型现在为什么都是decoder-only架构<br />纯流体的粘度测试怎么做<br />烟草花叶病毒属外壳蛋白进入叶绿体的已知机制介绍<br />如何证明费马大定理？ | 1 事实正确性(Factuality),<br />2 满足用户需求(User Satisfaction), <br />3 清晰度(Clarity), <br />4 逻辑连贯性(Logical Coherence), <br />5 完备性(Completeness)                |
+| Information Retrieval | Fast and direct access to factual information                                                                                                                                                                      | 大雪农历初几<br />一加仑是多少升<br />西瓜书的目录是什么                                                                                       | 1 事实正确性(Factuality),<br />2 满足用户需求(User Satisfaction), <br />3 清晰度 (Clarity), <br />4 完备性 (Completeness), <br />5 逻辑连贯性(Logical Coherence)              |
+| Use through APIs      | Use through Application Programming Interface instead of user interfaces<br />Explore and test the capabilities of LLM, such as evaluating it on various tasks, simulating agents, environments, or datasets, etc. | 大模型CEval评测<br />MBTI测试<br />评价模型生成内容的helpfulness                                                                               | 1 事实正确性(Factuality),<br />2 满足用户需求(User Satisfaction), <br />3 清晰度(Clarity), <br />4 逻辑连贯性(Logical Coherence), <br />5 完备性(Completeness)                |
+| Ask for Advice        | Career development, personal counseling, gift recommendation, etc., or creating personal schedules, travel plans, shopping lists, etc.                                                                             | 如何快速提高英语听力能力？<br />哪些有效方式可以缓解失眠症状？<br />适合中老年人的健康监测智能设备推荐                                         | 1 满足用户需求(User Satisfaction),<br />2 事实正确性(Factuality), <br />3 公平与可负责程度(Fairness and Responsibility), <br />4 创造性(Creativity), <br />5 丰富度(Richness) |
+| Seek Creativity       | Brainstorming for inspiration, innovative ideas, etc.                                                                                                                                                              | 设计三个生鲜超市slogan<br />我在构思经济学的课题，关于后疫情时代消费者行为变化，给我几个具体的idea<br />如何发财                               | 1 满足用户需求(User Satisfaction),<br />2 逻辑连贯性(Logical Coherence), <br />3 创造性(Creativity), <br />4 丰富度(Richness), <br />5 事实正确性(Factuality)                 |
+| Leisure               | Movie and music recommendations, games, and other entertaining activities                                                                                                                                          | 下饭剧推荐<br />分享一个关于程序员的幽默笑话<br />推荐几款好玩的音乐节奏游戏                                                                   | 1 满足用户需求(User Satisfaction),<br />2 趣味性 (Engagement), <br />3 适宜性 (Appropriateness), <br />4 创造性 (Creativity), <br />5 事实正确性 (Factuality)                 |
 
 ## Questions and Evaluations
 
