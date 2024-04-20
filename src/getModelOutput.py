@@ -20,7 +20,7 @@ class OpenAIFormat(APIclass):
         else:
             self.client = OpenAI()
             
-    # tag='人类改写'
+
     def get_response(self, INPUT_TEXT):
         response = self.client.chat.completions.create(
                 model=self.model_name,
@@ -205,10 +205,46 @@ class Spark(APIclass):
         ans=SparkApi.answer
         return ans
     
+import anthropic
+class Anthropic(APIclass):
+    def __init__(self,model_name):
+        self.model_name=model_name
+        self.client = anthropic.Anthropic(
+            # defaults to os.environ.get("ANTHROPIC_API_KEY")
+            api_key=""
+        )
+
+    
+    def get_response(self, INPUT_TEXT):
+        # response = self.client.chat.completions.create(
+        #         model=self.model_name,
+        #         messages=[
+        #             # {"role": "system", "content": "You are a helpful assistant"},
+        #             {"role": "user", "content": INPUT_TEXT},
+        #         ],
+        #     )
+        # ans=response.choices[0].message.content
+
+
+        message = self.client.messages.create(
+            model=self.model_name, #"claude-3-opus-20240229",
+            # system="Respond only in Yoda-speak.",
+            messages=[
+                {"role": "user", "content": INPUT_TEXT}
+            ]
+        )
+        ans=message.content[0].text
+        if 'Error code:' in ans:
+            print(ans)
+            raise Exception(ans)
+        return ans
+
 
 def getModelClass(model_name): # tag -> INPUT_TEXT
-    if model_name=='deepseek-chat' or model_name=='gpt-3.5-turbo' or model_name=="gpt-4-1106-preview" or model_name=="gpt-4-0125-preview":
+    if model_name=='deepseek-chat' or model_name=='gpt-3.5-turbo' or model_name=="gpt-4-0125-preview":
         return OpenAIFormat(model_name)
+    elif model_name=='claude-3-opus-20240229':
+        return Anthropic(model_name)
     elif model_name=='glm-4':
         return ZhiPu(model_name)
     elif model_name=='Baichuan2-Turbo':
@@ -256,29 +292,21 @@ def getOutput(model_name,tag):
     return df_question
 
 
-model_list=['deepseek-chat','gpt-3.5-turbo','gpt-4-1106-preview','gpt-4-0125-preview','glm-4',"Baichuan2-Turbo",'qwen-turbo','qwen-max',"ERNIE-Bot-4"]
+model_list=['deepseek-chat','gpt-3.5-turbo','gpt-4-0125-preview','glm-4',"Baichuan2-Turbo",'qwen-turbo','qwen-max',"ERNIE-Bot-4"]
 
 
 import argparse
 def getParser():
     parser = argparse.ArgumentParser()
     parser.add_argument('--model', type=str, default='deepseek-chat', help='model name')
-    parser.add_argument('--field', type=str, default='API', help='intent field')
+    parser.add_argument('--field', type=str, default='Factual QA', help='intent')
     args = parser.parse_args()
     return args
 
 if __name__ == "__main__":
     args=getParser()
-    
-    field_name_list=['InformationRetrieval','SolveProblem','API']
-    field_name_list_v2=['SolveProblemGPT','SeekCreativity','Advice','Leisure']
-    sheet_name=args.field
-    if sheet_name in field_name_list:
-        file_path = '../data/original_data.xlsx'
-    elif sheet_name in field_name_list_v2:
-        file_path = '../data/GPT4_verification.xlsx'
-    else:
-        print("Incorrect field name",sheet_name)
+
+    file_path="../data/data_all.csv"
 
     test_model=args.model
     # test_model='gpt-4-0125-preview'
@@ -290,18 +318,14 @@ if __name__ == "__main__":
     # test_model='qwen-turbo'
     # test_model='qwen-max'
 
-    field=sheet_name
+    field=args.field
+     tag='question'
 
-    df_question = pd.read_excel(file_path, sheet_name=sheet_name,engine='openpyxl')
-    # df_question= pd.read_csv(f"../data/modelOutput/{field}_{test_model}.csv")
+    df_question= pd.read_csv(file_path)
+    df_question=df_question[df_question['user_intent']==field]
 
-    print(len(df_question),df_question.columns.tolist())
     print(field)
-
-    if field in field_name_list:
-        tag='人类改写'
-    else:
-        tag='q1'
+    print(len(df_question))
     print(test_model)
 
     df_ans=getOutput(test_model,tag)

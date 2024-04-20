@@ -42,7 +42,7 @@ def getInstruction(field,input_question,gpt4_answer,test_answer):
     请记住，你必须在你打分前进行评价和解释。在你对每个维度的解释之后，需要加上对该维度的打分。之后，在你回答的末尾，按照以下字典格式（包括括号）返回你所有的打分结果，并确保你的打分结果是整数： 
     {’维度一’: 打分, ’维度二’: 打分, ..., ’综合得分’: 打分}，例如：{{'满足用户需求': 6, '趣味性': 8..., '综合得分': 7}}。
     用户的提问：''',
-    'InformationRetrieval':'''请你以公正的评判者的身份，评估一个AI助手对于用户提问的回答的质量。由于您评估的回答类型是[信息检索]，因此你需要从下面的5个维度对回答进行评估:
+    'Factual QA':'''请你以公正的评判者的身份，评估一个AI助手对于用户提问的回答的质量。由于您评估的回答类型是[信息检索]，因此你需要从下面的5个维度对回答进行评估:
     1 事实正确性(Factuality)
     提供的信息是否准确无误，是否基于可信的事实和数据
     2 满足用户需求(User Satisfaction)
@@ -72,7 +72,7 @@ def getInstruction(field,input_question,gpt4_answer,test_answer):
     请记住，你必须在你打分前进行评价和解释。在你对每个维度的解释之后，需要加上对该维度的打分。之后，在你回答的末尾，按照以下字典格式（包括括号）返回你所有的打分结果，并确保你的打分结果是整数： 
     {’维度一’: 打分, ’维度二’: 打分, ..., ’综合得分’: 打分}，例如：{{'事实正确性': 6, '满足用户需求': 8..., '综合得分': 7}}。
     用户的提问：''',
-    'SeekCreativity':'''请你以公正的评判者的身份，评估一个AI助手对于用户提问的回答的质量。由于您评估的回答类型是[给出创意]，因此你需要从下面的5个维度对回答进行评估:
+    'Seek Creativity':'''请你以公正的评判者的身份，评估一个AI助手对于用户提问的回答的质量。由于您评估的回答类型是[给出创意]，因此你需要从下面的5个维度对回答进行评估:
     1 满足用户需求(User Satisfaction)
     是否满足了用户提出问题的目的和需求，是否对问题进行了全面而恰当的回应
     2 逻辑连贯性(Logical Coherence)
@@ -102,7 +102,7 @@ def getInstruction(field,input_question,gpt4_answer,test_answer):
     请记住，你必须在你打分前进行评价和解释。在你对每个维度的解释之后，需要加上对该维度的打分。之后，在你回答的末尾，按照以下字典格式（包括括号）返回你所有的打分结果，并确保你的打分结果是整数： 
     {’维度一’: 打分, ’维度二’: 打分, ..., ’综合得分’: 打分}，例如：{{'满足用户需求': 6, '逻辑连贯性': 8..., '综合得分': 7}}。
     用户的提问：''',
-    'Advice':'''请你以公正的评判者的身份，评估一个AI助手对于用户提问的回答的质量。由于您评估的回答类型是[给出建议]，因此你需要从下面的5个维度对回答进行评估:
+    'Ask for Advice':'''请你以公正的评判者的身份，评估一个AI助手对于用户提问的回答的质量。由于您评估的回答类型是[给出建议]，因此你需要从下面的5个维度对回答进行评估:
     1 满足用户需求(User Satisfaction)
     是否满足了用户提出问题的目的和需求，是否对问题进行了全面而恰当的回应
     2 事实正确性(Factuality)
@@ -132,7 +132,7 @@ def getInstruction(field,input_question,gpt4_answer,test_answer):
     请记住，你必须在你打分前进行评价和解释。在你对每个维度的解释之后，需要加上对该维度的打分。之后，在你回答的末尾，按照以下字典格式（包括括号）返回你所有的打分结果，并确保你的打分结果是整数： 
     {’维度一’: 打分, ’维度二’: 打分, ..., ’综合得分’: 打分}，例如：{{'满足用户需求': 6, '事实正确性': 8..., '综合得分': 7}}。
     用户的提问：''',
-    'SolveProblem':'''请你以公正的评判者的身份，评估一个AI助手对于用户提问的回答的质量。由于您评估的回答类型是[解决专业问题]，因此你需要从下面的5个维度对回答进行评估: 
+    'Solve Professional Problem':'''请你以公正的评判者的身份，评估一个AI助手对于用户提问的回答的质量。由于您评估的回答类型是[解决专业问题]，因此你需要从下面的5个维度对回答进行评估: 
     1 事实正确性(Factuality)
     提供的信息是否准确无误，是否基于可信的事实和数据
     2 满足用户需求(User Satisfaction)
@@ -159,7 +159,7 @@ def getInstruction(field,input_question,gpt4_answer,test_answer):
     只有当模型回答质量显著超过参考答案，充分地解决了用户问题和所有需求，并且在所有维度上都接近满分 的情况下，才能得9到10分。 
     作为示例，参考答案可以得到8分。
 
-    请记住，你必须在你打分前进行评价和解释。在你对每个维度的解释之后，需要加上对该维度的打分。之 后，在你回答的末尾，按照以下字典格式（包括括号）返回你所有的打分结果，并确保你的打分结果是整 数： 
+    请记住，你必须在你打分前进行评价和解释。在你对每个维度的解释之后，需要加上对该维度的打分。之后，在你回答的末尾，按照以下字典格式（包括括号）返回你所有的打分结果，并确保你的打分结果是整 数： 
     {’维度一’: 打分, ’维度二’: 打分, ..., ’综合得分’: 打分}，例如：{’事实正确性’: 9, ’满足用户需求’: 6, ’综合得分’: 7}。
     用户的提问：[问题]
     [参考答案开始] [参考答案] [参考答案结束]
@@ -191,16 +191,13 @@ def getInstruction(field,input_question,gpt4_answer,test_answer):
     只有当模型回答质量显著超过参考答案，充分地解决了用户问题和所有需求，并且在所有维度上都接近满分 的情况下，才能得9到10分。 
     作为示例，参考答案可以得到8分。
 
-    请记住，你必须在你打分前进行评价和解释。在你对每个维度的解释之后，需要加上对该维度的打分。之 后，在你回答的末尾，按照以下字典格式（包括括号）返回你所有的打分结果，并确保你的打分结果是整 数： 
+    请记住，你必须在你打分前进行评价和解释。在你对每个维度的解释之后，需要加上对该维度的打分。之后，在你回答的末尾，按照以下字典格式（包括括号）返回你所有的打分结果，并确保你的打分结果是整 数： 
     {’维度一’: 打分, ’维度二’: 打分, ..., ’综合得分’: 打分}，例如：{’事实正确性’: 9, ’满足用户需求’: 6, ’综合得分’: 7}。
     用户的提问：[问题]
     [参考答案开始] [参考答案] [参考答案结束]
     [助手的答案开始] [模型答案] [助手的答案结束]'''
     }
-    if field=='SolveProblemGPT':
-        input_prompt=prompt_dict['SolveProblem']
-    else:
-        input_prompt=prompt_dict[field]
+    input_prompt=prompt_dict[field]
     prompt=input_prompt+input_question
     prompt+=f"\n[参考答案开始]\n{gpt4_answer}\n[参考答案结束]\n"
     prompt+=f"[助手的答案开始]\n{test_answer}\n[助手的答案结束]\n"
@@ -211,14 +208,8 @@ def main():
     args=getParser()
 
     field=args.field # seekCreativity
-    if field=='SolveProblem':
-        ans_path=f"../data/ans/ans_{field}_Human.csv"
-    else:
-        ans_path=f"../data/ans/ans_{field}_GPT4.csv"
-    if field in ['SolveProblemGPT','SeekCreativity','Advice','Leisure']:
-        question_tag='q1'
-    else:
-        question_tag='人类改写'
+    ans_path=f"../data/data_all.csv"
+    question_tag='question'
 
     ans_df=pd.read_csv(ans_path)
 
@@ -242,20 +233,19 @@ def main():
     print('merged df:',len(df))
 
 
-
     client=OpenAI()
 
     if 'evaluation' not in df.columns.tolist():
         df['evaluation']=""
     else:
         df.fillna('',inplace=True)
-    df.rename({'GPT4-ans-gptQ':'GPT4-ans'},axis=1,inplace=True)
+
     for index,row in df.iterrows():
         if row['evaluation']!='':
             continue
         # print(index)
         # break
-        INPUT_TEXT=getInstruction(field,row[question_tag],row['GPT4-ans'],row[test_model])
+        INPUT_TEXT=getInstruction(field,row[question_tag],row['reference_ans'],row[test_model])
 
         try:
             completion = client.chat.completions.create(
@@ -271,15 +261,15 @@ def main():
         except Exception as e:
             x="Error!!!!!!\n"+str(e)
             print(x)
-            df[[question_tag,'GPT4-ans',test_model,'evaluation']].to_csv(f'../data/evaluation/{field}_{test_model}_evaluation_tmp.csv',encoding='utf-8-sig')
+            df[[question_tag,'reference_ans',test_model,'evaluation']].to_csv(f'../data/evaluation/{field}_{test_model}_evaluation_tmp.csv',encoding='utf-8-sig')
             return
         df.loc[index,'evaluation']=x
         print(x)
         print('****** ******')
         if index%10==0:
-            df[[question_tag,'GPT4-ans',test_model,'evaluation']].to_csv(f'../data/evaluation/{field}_{test_model}_evaluation_tmp.csv',encoding='utf-8-sig')
+            df[[question_tag,'reference_ans',test_model,'evaluation']].to_csv(f'../data/evaluation/{field}_{test_model}_evaluation_tmp.csv',encoding='utf-8-sig')
 
-    df[[question_tag,'GPT4-ans',test_model,'evaluation']].to_csv(f'../data/evaluation/{field}_{test_model}_evaluation.csv',encoding='utf-8-sig')
+    df[[question_tag,'reference_ans',test_model,'evaluation']].to_csv(f'../data/evaluation/{field}_{test_model}_evaluation.csv',encoding='utf-8-sig')
 
 
 if __name__ == "__main__":
