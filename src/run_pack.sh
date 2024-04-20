@@ -1,4 +1,4 @@
-field_list=('InformationRetrieval' 'SolveProblem' 'SolveProblemGPT' 'API' 'SeekCreativity' 'Advice' 'Leisure')
+field_list=('Factual_QA' 'Solve_Professional_Problem'  'API' 'Text_Assistant' 'Seek_Creativity' 'Ask_for_Advice' 'Leisure')
 model='ERNIE-Bot-4'
 
 task() {
