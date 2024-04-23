@@ -1,6 +1,6 @@
 # User-Centric Evaluation of LLMs
 
-Paper: A User-Centric Multi-Intent Benchmark for Evaluating Large Language Models
+📚 See our Paper [Here](https://arxiv.org/pdf/2404.13940.pdf).
 
 💡 Currently Call for Contributions
 
@@ -79,12 +79,15 @@ Chinese Cases
 
 ## Citation
 
-- Please cite our [Report](https://jiayinwang.notion.site/User-Centric-Evaluation-of-LLMs-e2fae792b39e43ec81b5428437688720?pvs=4) if you find our work valuable, thank you!
+- Please cite our [Paper](https://arxiv.org/pdf/2404.13940.pdf) if you find our work valuable, thank you!
 
 ```
-@inproceedings{URS,
-	title={URS: Evaluating Large Language Models on User Reported Scenarios},
-	booktitle={THUIR Blog},
-	year={2024}
+@inproceedings{wang2024URS,
+	title={A User-Centric Benchmark for Evaluating Large Language Models},
+	author={Jiayin Wang and Fengran Mo and Weizhi Ma and Peijie Sun and Min Zhang and Jian-Yun Nie},
+	year={2024},
+	eprint={2404.13940},
+  archivePrefix={arXiv},
+  primaryClass={cs.CL}
 }
 ```
