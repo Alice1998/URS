@@ -1,6 +1,0 @@
-data/ans/*.csv
-data/evaluation/*.csv
-data/final_evaluation/*.csv
-data/modelOutput/*.csv
-.DS_Store
-*/.DS_Store
