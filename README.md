@@ -1,6 +1,6 @@
 # User-Centric Evaluation of LLMs
 
-📚 See our Paper [Here](https://arxiv.org/pdf/2404.13940.pdf).
+📚 See our Paper [Here](https://aclanthology.org/2024.emnlp-main.210.pdf).
 
 📃 Dataset and Benchmark Process [Here](https://www.dropbox.com/scl/fo/wx6k7z18pjicqmt07b78n/ANZqlkAuBOiWxXzAE08AE8Y?rlkey=1fzeq8aalf4231rsbpa7vty0k&st=uvclo83a&dl=0).
 
@@ -81,7 +81,7 @@ Chinese Cases
 
 ## Citation
 
-- Please cite our [Paper](https://arxiv.org/pdf/2404.13940.pdf) if you find our work valuable, thank you!
+- Please cite our [Paper](https://aclanthology.org/2024.emnlp-main.210.pdf) if you find our work valuable, thank you!
 
 ```
 @inproceedings{wang2024user,
