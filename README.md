@@ -84,12 +84,11 @@ Chinese Cases
 - Please cite our [Paper](https://arxiv.org/pdf/2404.13940.pdf) if you find our work valuable, thank you!
 
 ```
-@inproceedings{wang2024URS,
-	title={A User-Centric Benchmark for Evaluating Large Language Models},
-	author={Jiayin Wang and Fengran Mo and Weizhi Ma and Peijie Sun and Min Zhang and Jian-Yun Nie},
-	year={2024},
-	eprint={2404.13940},
-  archivePrefix={arXiv},
-  primaryClass={cs.CL}
+@inproceedings{wang2024user,
+  title={A User-Centric Multi-Intent Benchmark for Evaluating Large Language Models},
+  author={Wang, Jiayin and Mo, Fengran and Ma, Weizhi and Sun, Peijie and Zhang, Min and Nie, Jian-Yun},
+  booktitle={Proceedings of the 2024 Conference on Empirical Methods in Natural Language Processing},
+  pages={3588--3612},
+  year={2024}
 }
 ```
