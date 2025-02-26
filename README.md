@@ -1,8 +1,9 @@
 # User-Centric Evaluation of LLMs
 
-📚 See our Paper [Here](https://aclanthology.org/2024.emnlp-main.210.pdf).
+📚 **Our Paper (EMNLP 24 Resource Award)**
+[A User-Centric Multi-Intent Benchmark for Evaluating Large Language Models](https://aclanthology.org/2024.emnlp-main.210.pdf).
 
-📃 Dataset and Benchmark Process [Here](https://www.dropbox.com/scl/fo/wx6k7z18pjicqmt07b78n/ANZqlkAuBOiWxXzAE08AE8Y?rlkey=1fzeq8aalf4231rsbpa7vty0k&st=uvclo83a&dl=0).
+📃 **Dataset** [HuggingFace](https://huggingface.co/datasets/JiayinWang/URS). Benchmark Process [Here](https://www.dropbox.com/scl/fo/wx6k7z18pjicqmt07b78n/ANZqlkAuBOiWxXzAE08AE8Y?rlkey=1fzeq8aalf4231rsbpa7vty0k&st=uvclo83a&dl=0).
 
 💡 Currently Call for Contributions
 
