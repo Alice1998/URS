@@ -10,8 +10,9 @@ def getParser():
     args = parser.parse_args()
     return args
 
-
+# 构建 ChatGPT 的提示语 prompt（含多种任务类型的评分模板）
 def getInstruction(field,input_question,gpt4_answer,test_answer):
+    # 定义不同意图的评分维度及评价方式的字典
     prompt_dict={"Leisure":'''请你以公正的评判者的身份，评估一个AI助手对于用户提问的回答的质量。由于您评估的回答类型是[休闲娱乐]，因此你需要从下面的5个维度对回答进行评估:
     1 满足用户需求(User Satisfaction)
     是否满足了用户提出问题的目的和需求，是否对问题进行了全面而恰当的回应
@@ -223,13 +224,16 @@ def getInstruction(field,input_question,gpt4_answer,test_answer):
     {’维度一’: 打分, ’维度二’: 打分, ..., ’综合得分’: 打分}，例如：{’清晰度’: 9, ’满足用户需求’: 6, ...’综合得分’: 7}。
     用户的提问：'''
     }
+    # 获取对应意图类别的评分模板前缀
+    # 构建完整的 prompt，包含用户问题、参考答案、测试模型输出
     input_prompt=prompt_dict[field]
     prompt=input_prompt+input_question
     prompt+=f"\n[参考答案开始]\n{gpt4_answer}\n[参考答案结束]\n"
     prompt+=f"[助手的答案开始]\n{test_answer}\n[助手的答案结束]\n"
     # print(prompt)
     return prompt
-    
+
+# 主函数：读取数据、构造prompt、调用OpenAI API、保存结果
 def main():
     args=getParser()
 
@@ -237,8 +241,10 @@ def main():
     ans_path=f"../data/data_all.csv"
     question_tag='question'
 
+    # 读取数据（原始问题+参考答案）
     ans_df=pd.read_csv(ans_path)
 
+    # 根据模型名读取对应模型的回答输出
     # test_model='deepseek-chat'
     # test_model='gpt-3.5-turbo'
     # test_model='glm-4'
@@ -251,29 +257,36 @@ def main():
     print(test_model)
     print(field)
 
+    # 空值填充（防止合并失败）
     ans_df.fillna('无',inplace=True)
     test_df.fillna('无',inplace=True)
+    # 筛选掉无效问题
     ans_df_v1=ans_df[ans_df[question_tag]!='无']
     test_df_v1=test_df[test_df[question_tag]!='无']
+     # 根据问题字段合并数据集，suffix 分别为参考答案和模型回答
     df=pd.merge(ans_df_v1,test_df_v1,on=question_tag,suffixes=['_ans','_test'])
     print('merged df:',len(df))
 
 
     client=OpenAI()
 
+     # 初始化或补全评价列
     if 'evaluation' not in df.columns.tolist():
         df['evaluation']=""
     else:
         df.fillna('',inplace=True)
 
+    # 遍历每条问题-答案样本，逐条进行评价
     for index,row in df.iterrows():
         if row['evaluation']!='':
             continue
         # print(index)
         # break
+        # 构造 prompt
         INPUT_TEXT=getInstruction(field,row[question_tag],row['reference_ans'],row[test_model])
 
         try:
+            # 调用 OpenAI API 获取评分结果（模型默认为 gpt-4-0125-preview）
             completion = client.chat.completions.create(
                 # model="gpt-3.5-turbo",
                 # model='gpt-4-1106-preview',
@@ -285,16 +298,19 @@ def main():
             )
             x=completion.choices[0].message.content
         except Exception as e:
+            # 异常处理：输出错误信息并保存当前中间结果
             x="Error!!!!!!\n"+str(e)
             print(x)
             df[[question_tag,'reference_ans',test_model,'evaluation']].to_csv(f'../data/evaluation/{field}_{test_model}_evaluation_tmp.csv',encoding='utf-8-sig')
             return
+        # 保存该条评价结果
         df.loc[index,'evaluation']=x
         print(x)
         print('****** ******')
+         # 每处理10条中间保存一次
         if index%10==0:
             df[[question_tag,'reference_ans',test_model,'evaluation']].to_csv(f'../data/evaluation/{field}_{test_model}_evaluation_tmp.csv',encoding='utf-8-sig')
-
+    # 所有处理完成后，保存最终的评价结果
     df[[question_tag,'reference_ans',test_model,'evaluation']].to_csv(f'../data/evaluation/{field}_{test_model}_evaluation.csv',encoding='utf-8-sig')
 
 
